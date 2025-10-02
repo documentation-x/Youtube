@@ -1,0 +1,29 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "본 저장소는 **YouTube 채널 최적화부터 최종 리드(Lead) 확보에 이르는 엔드투엔드(End-to-End) 마케팅 전략**에 관한 모든 내부 문서, 가이드라인, 표준운영절차(SOP), 케이스 스터디를 중앙에서 관리하기 위한 공식 지식 베이스입니다.",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/documentation-x/Youtube.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/documentation-x/Youtube/issues"
+  },
+  "homepage": "https://github.com/documentation-x/Youtube#readme",
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.6",
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.14.1"
+  }
+}
