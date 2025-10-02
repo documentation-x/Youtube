@@ -8,9 +8,11 @@ public_folder: "/Youtube/assets/uploads"
 collections:
   - name: "strategy"
     label: "📈 전략 (Strategy)"
-    folder: "01_Strategy"
+    folder: "src/content/strategy"
     create: true
     slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
       - {label: "제목", name: "title", widget: "string"}
       - {label: "작성일", name: "date", widget: "datetime"}
@@ -19,9 +21,11 @@ collections:
 
   - name: "youtube_seo"
     label: "📺 유튜브 SEO"
-    folder: "02_YouTube_Optimization/seo"
+    folder: "src/content/youtube-seo"
     create: true
     slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
       - {label: "제목", name: "title", widget: "string"}
       - {label: "작성일", name: "date", widget: "datetime"}
@@ -30,9 +34,11 @@ collections:
 
   - name: "youtube_analytics"
     label: "📊 유튜브 분석"
-    folder: "02_YouTube_Optimization/analytics"
+    folder: "src/content/youtube-analytics"
     create: true
     slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
       - {label: "제목", name: "title", widget: "string"}
       - {label: "작성일", name: "date", widget: "datetime"}
@@ -41,9 +47,11 @@ collections:
 
   - name: "content_hub_setup"
     label: "🌐 콘텐츠 허브 설정"
-    folder: "03_Content_Hub/setup"
+    folder: "src/content/content-hub-setup"
     create: true
     slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
       - {label: "제목", name: "title", widget: "string"}
       - {label: "작성일", name: "date", widget: "datetime"}
@@ -52,9 +60,11 @@ collections:
 
   - name: "content_hub_automation"
     label: "🤖 콘텐츠 허브 자동화"
-    folder: "03_Content_Hub/automation"
+    folder: "src/content/content-hub-automation"
     create: true
     slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
       - {label: "제목", name: "title", widget: "string"}
       - {label: "작성일", name: "date", widget: "datetime"}
@@ -63,9 +73,11 @@ collections:
 
   - name: "lead_cro"
     label: "🎯 CRO & 랜딩페이지"
-    folder: "04_Lead_Optimization/cro"
+    folder: "src/content/lead-cro"
     create: true
     slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
       - {label: "제목", name: "title", widget: "string"}
       - {label: "작성일", name: "date", widget: "datetime"}
@@ -74,9 +86,11 @@ collections:
 
   - name: "lead_forms"
     label: "📝 리드 폼 & 관리"
-    folder: "04_Lead_Optimization/forms"
+    folder: "src/content/lead-forms"
     create: true
     slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
       - {label: "제목", name: "title", widget: "string"}
       - {label: "작성일", name: "date", widget: "datetime"}
@@ -85,9 +99,11 @@ collections:
 
   - name: "sops"
     label: "📋 표준운영절차 (SOPs)"
-    folder: "05_SOPs"
+    folder: "src/content/sops"
     create: true
     slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
       - {label: "제목", name: "title", widget: "string"}
       - {label: "작성일", name: "date", widget: "datetime"}
@@ -97,9 +113,11 @@ collections:
 
   - name: "case_studies"
     label: "📊 케이스 스터디"
-    folder: "06_Case_Studies"
+    folder: "src/content/case-studies"
     create: true
     slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
       - {label: "제목", name: "title", widget: "string"}
       - {label: "프로젝트명", name: "project", widget: "string"}

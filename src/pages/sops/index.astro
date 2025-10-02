@@ -1,0 +1,127 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const posts = await getCollection('sops');
+const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<Layout title="📋 SOPs">
+  <div class="container">
+    <a href="/Youtube/" class="back-link">← 홈으로</a>
+    <h1>📋 SOPs</h1>
+    <p>표준 운영 절차 및 가이드</p>
+
+    <div class="posts">
+      {sortedPosts.map((post) => (
+        <article class="post-card">
+          <a href={`/Youtube/sops/${post.slug}/`}>
+            <h2>{post.data.title}</h2>
+            <div class="metadata">
+              <time datetime={post.data.date.toISOString()}>
+                {post.data.date.toLocaleDateString('ko-KR')}
+              </time>
+              {post.data.category && (
+                <span class="category">📁 {post.data.category}</span>
+              )}
+            </div>
+            {post.data.tags && post.data.tags.length > 0 && (
+              <div class="tags">
+                {post.data.tags.map((tag) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            )}
+          </a>
+        </article>
+      ))}
+      {sortedPosts.length === 0 && (
+        <p class="empty">아직 작성된 문서가 없습니다.</p>
+      )}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .posts {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .post-card {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.2s;
+  }
+
+  .post-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent);
+  }
+
+  .post-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .post-card h2 {
+    margin: 0 0 0.5rem 0;
+    color: var(--text);
+  }
+
+  .metadata {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  .category {
+    color: #0066cc;
+    font-weight: 500;
+  }
+
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .tag {
+    background: var(--gray);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+  }
+
+  .empty {
+    text-align: center;
+    color: #999;
+    padding: 3rem;
+  }
+</style>
