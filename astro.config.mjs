@@ -4,8 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://documentation-x.github.io',
-  base: '/Youtube',
+  site: 'https://re.works',
   integrations: [mdx(), sitemap()],
   markdown: {
     shikiConfig: {

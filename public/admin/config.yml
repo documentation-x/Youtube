@@ -7,7 +7,7 @@ backend:
 local_backend: true
 
 media_folder: "public/assets/uploads"
-public_folder: "/Youtube/assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
   - name: "strategy"

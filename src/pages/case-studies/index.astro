@@ -8,14 +8,14 @@ const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.get
 
 <Layout title="💼 Case Studies">
   <div class="container">
-    <a href="/Youtube/" class="back-link">← 홈으로</a>
+    <a href="/" class="back-link">← 홈으로</a>
     <h1>💼 Case Studies</h1>
     <p>성공 사례 및 프로젝트 결과</p>
 
     <div class="posts">
       {sortedPosts.map((post) => (
         <article class="post-card">
-          <a href={`/Youtube/case-studies/${post.slug}/`}>
+          <a href={`/case-studies/${post.slug}/`}>
             <h2>{post.data.title}</h2>
             <div class="metadata">
               <time datetime={post.data.date.toISOString()}>
