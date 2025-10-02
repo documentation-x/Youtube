@@ -1,0 +1,109 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "strategy"
+    label: "📈 전략 (Strategy)"
+    folder: "01_Strategy"
+    create: true
+    slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    fields:
+      - {label: "제목", name: "title", widget: "string"}
+      - {label: "작성일", name: "date", widget: "datetime"}
+      - {label: "태그", name: "tags", widget: "list", required: false}
+      - {label: "내용", name: "body", widget: "markdown"}
+
+  - name: "youtube_seo"
+    label: "📺 유튜브 SEO"
+    folder: "02_YouTube_Optimization/seo"
+    create: true
+    slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    fields:
+      - {label: "제목", name: "title", widget: "string"}
+      - {label: "작성일", name: "date", widget: "datetime"}
+      - {label: "태그", name: "tags", widget: "list", required: false}
+      - {label: "내용", name: "body", widget: "markdown"}
+
+  - name: "youtube_analytics"
+    label: "📊 유튜브 분석"
+    folder: "02_YouTube_Optimization/analytics"
+    create: true
+    slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    fields:
+      - {label: "제목", name: "title", widget: "string"}
+      - {label: "작성일", name: "date", widget: "datetime"}
+      - {label: "태그", name: "tags", widget: "list", required: false}
+      - {label: "내용", name: "body", widget: "markdown"}
+
+  - name: "content_hub_setup"
+    label: "🌐 콘텐츠 허브 설정"
+    folder: "03_Content_Hub/setup"
+    create: true
+    slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    fields:
+      - {label: "제목", name: "title", widget: "string"}
+      - {label: "작성일", name: "date", widget: "datetime"}
+      - {label: "태그", name: "tags", widget: "list", required: false}
+      - {label: "내용", name: "body", widget: "markdown"}
+
+  - name: "content_hub_automation"
+    label: "🤖 콘텐츠 허브 자동화"
+    folder: "03_Content_Hub/automation"
+    create: true
+    slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    fields:
+      - {label: "제목", name: "title", widget: "string"}
+      - {label: "작성일", name: "date", widget: "datetime"}
+      - {label: "태그", name: "tags", widget: "list", required: false}
+      - {label: "내용", name: "body", widget: "markdown"}
+
+  - name: "lead_cro"
+    label: "🎯 CRO & 랜딩페이지"
+    folder: "04_Lead_Optimization/cro"
+    create: true
+    slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    fields:
+      - {label: "제목", name: "title", widget: "string"}
+      - {label: "작성일", name: "date", widget: "datetime"}
+      - {label: "태그", name: "tags", widget: "list", required: false}
+      - {label: "내용", name: "body", widget: "markdown"}
+
+  - name: "lead_forms"
+    label: "📝 리드 폼 & 관리"
+    folder: "04_Lead_Optimization/forms"
+    create: true
+    slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    fields:
+      - {label: "제목", name: "title", widget: "string"}
+      - {label: "작성일", name: "date", widget: "datetime"}
+      - {label: "태그", name: "tags", widget: "list", required: false}
+      - {label: "내용", name: "body", widget: "markdown"}
+
+  - name: "sops"
+    label: "📋 표준운영절차 (SOPs)"
+    folder: "05_SOPs"
+    create: true
+    slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    fields:
+      - {label: "제목", name: "title", widget: "string"}
+      - {label: "작성일", name: "date", widget: "datetime"}
+      - {label: "카테고리", name: "category", widget: "select", options: ["YouTube", "Content Hub", "Lead Management", "Analytics", "General"]}
+      - {label: "태그", name: "tags", widget: "list", required: false}
+      - {label: "내용", name: "body", widget: "markdown"}
+
+  - name: "case_studies"
+    label: "📊 케이스 스터디"
+    folder: "06_Case_Studies"
+    create: true
+    slug: "{{year}}{{month}}{{day}}_{{slug}}"
+    fields:
+      - {label: "제목", name: "title", widget: "string"}
+      - {label: "프로젝트명", name: "project", widget: "string"}
+      - {label: "작성일", name: "date", widget: "datetime"}
+      - {label: "결과", name: "result", widget: "select", options: ["성공", "실패", "진행중"]}
+      - {label: "태그", name: "tags", widget: "list", required: false}
+      - {label: "내용", name: "body", widget: "markdown"}

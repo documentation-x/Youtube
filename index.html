@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube-Lead 최적화 전략 지식 저장소</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .folder {
+            background: #f5f5f5;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #0066cc;
+        }
+        .folder h3 {
+            margin-top: 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .admin-link {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .admin-link:hover {
+            background: #0052a3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 YouTube-Lead 최적화 전략 지식 저장소</h1>
+
+    <p>본 저장소는 <strong>YouTube 채널 최적화부터 최종 리드(Lead) 확보에 이르는 엔드투엔드(End-to-End) 마케팅 전략</strong>에 관한 모든 내부 문서, 가이드라인, 표준운영절차(SOP), 케이스 스터디를 중앙에서 관리하기 위한 공식 지식 베이스입니다.</p>
+
+    <a href="/admin/" class="admin-link">🔐 콘텐츠 관리자 로그인</a>
+
+    <h2>📁 저장소 구조</h2>
+
+    <div class="folder">
+        <h3>📈 01_Strategy</h3>
+        <p>전체 최적화 전략 및 프레임워크</p>
+    </div>
+
+    <div class="folder">
+        <h3>📺 02_YouTube_Optimization</h3>
+        <p>유튜브 SEO, 콘텐츠 기획, 분석 가이드</p>
+        <ul>
+            <li>seo/ - SEO 최적화 전략</li>
+            <li>analytics/ - 분석 및 리포팅</li>
+        </ul>
+    </div>
+
+    <div class="folder">
+        <h3>🌐 03_Content_Hub</h3>
+        <p>콘텐츠 허브(웹사이트) 구축 및 운영</p>
+        <ul>
+            <li>setup/ - 초기 설정 및 구축</li>
+            <li>automation/ - 자동화 프로세스</li>
+        </ul>
+    </div>
+
+    <div class="folder">
+        <h3>🎯 04_Lead_Optimization</h3>
+        <p>랜딩페이지, CRO, 리드 관리</p>
+        <ul>
+            <li>cro/ - 전환율 최적화</li>
+            <li>forms/ - 리드 폼 관리</li>
+        </ul>
+    </div>
+
+    <div class="folder">
+        <h3>📋 05_SOPs</h3>
+        <p>표준운영절차 (작업 단위 매뉴얼)</p>
+    </div>
+
+    <div class="folder">
+        <h3>📊 06_Case_Studies</h3>
+        <p>과거 프로젝트 성공/실패 사례 분석</p>
+    </div>
+
+    <h2>🚀 시작하기</h2>
+    <ul>
+        <li><a href="https://github.com/documentation-x/Youtube">GitHub 저장소</a></li>
+        <li><a href="/admin/">콘텐츠 관리 시스템</a></li>
+        <li><a href="_TEMPLATE.md">문서 템플릿</a></li>
+    </ul>
+
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
